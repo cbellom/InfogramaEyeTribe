@@ -623,7 +623,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  worldCollider: {fileID: 0}
   navigationState: 2
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -639,7 +638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  worldCollider: {fileID: 0}
   navigationState: 3
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -655,7 +653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  worldCollider: {fileID: 0}
   navigationState: 1
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -671,7 +668,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  worldCollider: {fileID: 0}
   navigationState: 0
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
