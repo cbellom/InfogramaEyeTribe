@@ -488,7 +488,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   cachedScale: {x: 0, y: 0, z: 0}
-  scale: 1.5
+  cachedRotation: {x: 0, y: 0, z: 0, w: 0}
+  deltaScale: 1.5
+  deltaRotate: .5
+  camera: {fileID: 0}
 --- !u!114 &11438658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -502,7 +505,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   cachedScale: {x: 0, y: 0, z: 0}
-  scale: 2.44000006
+  cachedRotation: {x: 0, y: 0, z: 0, w: 0}
+  deltaScale: 1.5
+  deltaRotate: 1.5
+  camera: {fileID: 0}
 --- !u!114 &11487392
 MonoBehaviour:
   m_ObjectHideFlags: 1
