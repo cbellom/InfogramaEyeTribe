@@ -11,13 +11,12 @@ public class NavigationButton : ObjectInteractable {
 	private RectTransform mContent;
 
 	void Awake(){
-		ObjectSelected = HanldeObjectSelected;
+		ObjectSelected = HandleObjectSelected;
 		mContent = mScrollRect.content;
 	}
 
-	private void HanldeObjectSelected(){
+	private void HandleObjectSelected(){
 		Vector3 difference = GetDifferenceDirection ();
-		//this is the wanted new position for the content
 		Vector3 newAnchoredPosition = mContent.anchoredPosition3D + difference;
 		mContent.anchoredPosition3D = newAnchoredPosition;
 

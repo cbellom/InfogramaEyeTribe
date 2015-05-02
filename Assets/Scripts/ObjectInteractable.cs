@@ -11,6 +11,7 @@ public class ObjectInteractable : MonoBehaviour {
 	private GameObject gazeIndicator;
 
 	protected Action ObjectSelected;
+	protected Action ObjectExited;
 
 	void Start(){
 		worldCollider = GameObject.Find("WorldCollider");
@@ -47,6 +48,10 @@ public class ObjectInteractable : MonoBehaviour {
 			if(worldCollider != null)
 				worldCollider.SetActive(true);
 		}
+
+		if (ObjectExited != null)
+			ObjectExited ();
+
 	}
 
 	private void UpdateValueColorGazeIndicator(){

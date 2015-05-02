@@ -2,11 +2,29 @@
 using System.Collections;
 
 public class StandOutObject : ObjectInteractable {
+	[SerializeField]
+	private Shader cachedShared;
+
 	void Awake(){
-		ObjectSelected = HanldeObjectSelected;
+		ObjectSelected = HandleObjectSelected;
+		ObjectExited = HandleObjectExited;
+		cachedShared = this.gameObject.renderer.sharedMaterial.shader;
 	}
 
-	private void HanldeObjectSelected(){
-		Debug.Log("Change Color");
+	void OnApplicationQuit() {
+		HandleObjectExited ();
+	}
+
+	private void HandleObjectSelected(){
+		Shader shared = Shader.Find("Self-Illumin/Bumped Specular");
+		this.gameObject.renderer.sharedMaterial.shader = shared;
+
+		Debug.Log("Change Shared");
+	}
+	
+	private void HandleObjectExited ()	{
+		this.gameObject.renderer.sharedMaterial.shader = cachedShared;
+		
+		Debug.Log("Reset Shared");
 	}
 }
