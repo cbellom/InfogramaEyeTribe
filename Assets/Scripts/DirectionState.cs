@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public enum NavigationState  {
+public enum DirectionState  {
 	Up,
 	Down,
 	Left,

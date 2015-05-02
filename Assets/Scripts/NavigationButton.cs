@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class NavigationButton : ObjectInteractable {
-	public NavigationState navigationState;
+	public DirectionState directionState;
 	[SerializeField]
 	private float deltaMovementScroll;
 	[SerializeField]
@@ -22,17 +22,17 @@ public class NavigationButton : ObjectInteractable {
 
 		elapsedTime = timeToTriggerAction - 0.05f;
 		isTriggerActivate = false;
-		Debug.Log("Go to " + navigationState.ToString());
+		Debug.Log("Go to " + directionState.ToString());
 	}
 
 	private Vector3 GetDifferenceDirection(){
-		if (navigationState == NavigationState.Up)
+		if (directionState == DirectionState.Up)
 			return new Vector3 (0, -deltaMovementScroll, 0);
-		if (navigationState == NavigationState.Down)
+		if (directionState == DirectionState.Down)
 			return new Vector3 (0, deltaMovementScroll, 0);
-		if (navigationState == NavigationState.Rigth)
+		if (directionState == DirectionState.Rigth)
 			return new Vector3 (-deltaMovementScroll, 0, 0);
-		if (navigationState == NavigationState.Left)
+		if (directionState == DirectionState.Left)
 			return new Vector3 (deltaMovementScroll, 0, 0);
 
 		return new Vector3 (0, 0, 0);

@@ -40,6 +40,8 @@ public class ScaleObject : ObjectInteractable{
 		SetRotationObject ();
 
 		SetActionOnSelectExitButtonOnRotationPanel ();
+		SetActionOnSelectRigthButtonOnRotationPanel ();
+		SetActionOnSelectLeftButtonOnRotationPanel ();
 		Debug.Log("Change Shared");
 	}
 	
@@ -115,5 +117,35 @@ public class ScaleObject : ObjectInteractable{
 	private void SetActionOnSelectExitButtonOnRotationPanel(){
 		ObjectInteractable buttonInteractable = rotationButtonsPanel.transform.FindChild("ExitButton").GetComponent<ObjectInteractable>() as ObjectInteractable;
 		buttonInteractable.SetObjectSelectedAction (HandleObjectExited);
+	}
+
+	private void SetActionOnSelectRigthButtonOnRotationPanel(){
+		RotationButton buttonRigth = rotationButtonsPanel.transform.FindChild("Rigth").GetComponent<RotationButton>() as RotationButton;
+		buttonRigth.ButtonClicked = HandleObjectSelectedRigthButton;
+	}
+
+	private void SetActionOnSelectLeftButtonOnRotationPanel(){
+		RotationButton buttonLeft = rotationButtonsPanel.transform.FindChild("Left").GetComponent<RotationButton>() as RotationButton;
+		buttonLeft.ButtonClicked = HandleObjectSelectedLeftButton;
+	}
+
+	private void HandleObjectSelectedRigthButton (){
+		float xRotation = this.gameObject.transform.localRotation.x;
+		float yRotation = this.gameObject.transform.localRotation.y - 0.05f;
+		float zRotation = this.gameObject.transform.localRotation.z;
+		float wRotation = this.gameObject.transform.localRotation.w;
+		
+		this.gameObject.transform.localRotation = new Quaternion(xRotation,yRotation,zRotation, wRotation);
+		Debug.Log ("Rotate R "+ this.name);
+	}
+
+	private void HandleObjectSelectedLeftButton (){
+		float xRotation = this.gameObject.transform.localRotation.x;
+		float yRotation = this.gameObject.transform.localRotation.y + 0.05f;
+		float zRotation = this.gameObject.transform.localRotation.z;
+		float wRotation = this.gameObject.transform.localRotation.w;
+		
+		this.gameObject.transform.localRotation = new Quaternion(xRotation,yRotation,zRotation, wRotation);
+		Debug.Log ("Rotate L "+ this.name);
 	}
 }
