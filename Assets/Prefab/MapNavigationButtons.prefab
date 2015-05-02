@@ -624,6 +624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   navigationState: 2
+  deltaMovementScroll: 5
+  mScrollRect: {fileID: 0}
 --- !u!114 &11497448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -637,6 +639,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   navigationState: 3
+  deltaMovementScroll: 5
+  mScrollRect: {fileID: 0}
 --- !u!114 &11497450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -650,6 +654,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   navigationState: 1
+  deltaMovementScroll: 5
+  mScrollRect: {fileID: 0}
 --- !u!114 &11497452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,6 +669,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
   navigationState: 0
+  deltaMovementScroll: 5
+  mScrollRect: {fileID: 0}
 --- !u!222 &22269780
 CanvasRenderer:
   m_ObjectHideFlags: 1

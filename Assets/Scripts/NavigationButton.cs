@@ -28,13 +28,13 @@ public class NavigationButton : ObjectInteractable {
 
 	private Vector3 GetDifferenceDirection(){
 		if (navigationState == NavigationState.Up)
-			return new Vector3 (0, deltaMovementScroll, 0);
-		if (navigationState == NavigationState.Down)
 			return new Vector3 (0, -deltaMovementScroll, 0);
+		if (navigationState == NavigationState.Down)
+			return new Vector3 (0, deltaMovementScroll, 0);
 		if (navigationState == NavigationState.Rigth)
-			return new Vector3 (deltaMovementScroll, 0, 0);
-		if (navigationState == NavigationState.Left)
 			return new Vector3 (-deltaMovementScroll, 0, 0);
+		if (navigationState == NavigationState.Left)
+			return new Vector3 (deltaMovementScroll, 0, 0);
 
 		return new Vector3 (0, 0, 0);
 	}
