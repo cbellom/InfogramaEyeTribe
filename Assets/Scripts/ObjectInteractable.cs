@@ -7,31 +7,42 @@ public class ObjectInteractable : MonoBehaviour {
 	private float timeToTriggerAction;
 	private float elapsedTime;
 	private bool isTriggerActivate;
+	private GameObject worldCollider;
 
 	protected Action ObjectSelected;
-	
+
+	void Start(){
+		worldCollider = GameObject.Find("WorldCollider");
+	}
+
 	void OnTriggerEnter(Collider other) {
 		elapsedTime = 0;
 		isTriggerActivate = false;
-		Debug.Log("Enter");      
+
+		if (other.gameObject.name == "UICollider") {
+			if(worldCollider != null)
+				worldCollider.SetActive(false);
+		}  
 	}
 	
 	void OnTriggerStay(Collider other) {
 		if (!isTriggerActivate) {
 			elapsedTime += Time.deltaTime;
 			if (elapsedTime >= timeToTriggerAction) {
-				Debug.Log ("+++++ Ejecutar accion");
 				isTriggerActivate = true;
 				if(ObjectSelected != null)
 					ObjectSelected();
 			}
-			Debug.Log ("Stay " + elapsedTime);
 		}
 	}
 	
 	void OnTriggerExit(Collider other) {
 		elapsedTime = 0;
 		isTriggerActivate = false;
-		Debug.Log("Exit");       
+
+		if (other.gameObject.name == "UICollider") {
+			if(worldCollider != null)
+				worldCollider.SetActive(true);
+		}
 	}
 }
