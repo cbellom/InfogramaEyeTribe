@@ -80,11 +80,11 @@ namespace CompleteProject
 					_GazeIndicator.transform.position = planeCoord;
 				}
 			}
-			else
-			{
-				if (_GazeIndicator.renderer.enabled)
-					_GazeIndicator.renderer.enabled = false;
-			}
+//			else
+//			{
+//				if (_GazeIndicator.renderer.enabled)
+//					_GazeIndicator.renderer.enabled = false;
+//			}
 						
 			//handle keypress
 			if (Input.GetKey(KeyCode.Escape))
