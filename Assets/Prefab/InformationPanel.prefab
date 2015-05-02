@@ -229,7 +229,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 1
-  worldCollider: {fileID: 0}
   worldColliderReference: {fileID: 0}
 --- !u!114 &11417316
 MonoBehaviour:

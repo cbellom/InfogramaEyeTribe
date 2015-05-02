@@ -6,6 +6,8 @@ TagManager:
   - ObjectInteractable
   - gazeIndicator
   - WorldModels
+  - NavigationPanel
+  - RotationPanel
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

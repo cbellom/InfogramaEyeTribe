@@ -7,6 +7,7 @@ public class ObjectInteractable : MonoBehaviour {
 	protected float timeToTriggerAction;
 	protected float elapsedTime;
 	protected bool isTriggerActivate;
+	protected bool canTriggerExit;
 	protected GameObject worldCollider;
 	private GameObject gazeIndicator;
 
@@ -16,6 +17,7 @@ public class ObjectInteractable : MonoBehaviour {
 	void Start(){
 		worldCollider = GameObject.Find("WorldCollider");
 		gazeIndicator = GameObject.FindWithTag("gazeIndicator");
+		canTriggerExit = true;
 	}
 
 	void OnTriggerEnter(Collider other) {
@@ -41,17 +43,22 @@ public class ObjectInteractable : MonoBehaviour {
 	}
 	
 	void OnTriggerExit(Collider other) {
-		elapsedTime = 0;
-		isTriggerActivate = false;
-		UpdateValueColorGazeIndicator ();
-		if (other.gameObject.name == "UICollider") {
-			if(worldCollider != null)
-				worldCollider.SetActive(true);
+		if (canTriggerExit) {
+			elapsedTime = 0;
+			isTriggerActivate = false;
+			UpdateValueColorGazeIndicator ();
+			if (other.gameObject.name == "UICollider") {
+				if (worldCollider != null)
+					worldCollider.SetActive (true);
+			}
+
+			if (ObjectExited != null)
+				ObjectExited ();
 		}
+	}
 
-		if (ObjectExited != null)
-			ObjectExited ();
-
+	public void SetObjectSelectedAction(Action HandleAction){
+		ObjectSelected = HandleAction;
 	}
 
 	private void UpdateValueColorGazeIndicator(){

@@ -10,10 +10,12 @@ public class ScaleObject : ObjectInteractable{
 	private float deltaScale = 1.5f;
 	[SerializeField]
 	private float deltaRotate = 1.5f;
+	private Camera camera;	
 	[SerializeField]
-	private Camera camera;
+	private GameObject mapNavigationButtonsPanel;	
+	[SerializeField]
+	private GameObject rotationButtonsPanel;	
 
-	
 	void Awake(){
 		ObjectSelected = HandleObjectSelected;
 		ObjectExited = HandleObjectExited;
@@ -27,18 +29,29 @@ public class ScaleObject : ObjectInteractable{
 	}
 
 	private void HandleObjectSelected(){
+		canTriggerExit = false;
+
+		if(worldCollider != null)
+			worldCollider.SetActive(false);
+
 		ChangeOrthographicCameraTo (false);
 		InactiveFamilyObjectsOf (this.gameObject);
 		SetScaleObject ();	
 		SetRotationObject ();
+
+		SetActionOnSelectExitButtonOnRotationPanel ();
 		Debug.Log("Change Shared");
 	}
 	
-	private void HandleObjectExited ()	{
+	private void HandleObjectExited ()	{	
 		ActiveFamilyObjectsOf (this.gameObject);
 		RestoreScaleObject ();
 		RestoreRotationObject ();
 		ChangeOrthographicCameraTo (true);
+		
+		canTriggerExit = true;
+		if(worldCollider != null)
+			worldCollider.SetActive(true);
 		Debug.Log("Reset Shared");
 	}
 
@@ -93,7 +106,14 @@ public class ScaleObject : ObjectInteractable{
 		}
 	}
 
-	private void ChangeOrthographicCameraTo(bool isOrthographicActive){
-		camera.orthographic = isOrthographicActive;
+	private void ChangeOrthographicCameraTo(bool isActive){
+		camera.orthographic = isActive;
+		mapNavigationButtonsPanel.SetActive (isActive);
+		rotationButtonsPanel.SetActive (!isActive);
+	}
+
+	private void SetActionOnSelectExitButtonOnRotationPanel(){
+		ObjectInteractable buttonInteractable = rotationButtonsPanel.transform.FindChild("ExitButton").GetComponent<ObjectInteractable>() as ObjectInteractable;
+		buttonInteractable.SetObjectSelectedAction (HandleObjectExited);
 	}
 }

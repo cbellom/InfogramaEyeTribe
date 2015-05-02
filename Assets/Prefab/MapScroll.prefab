@@ -491,7 +491,8 @@ MonoBehaviour:
   cachedRotation: {x: 0, y: 0, z: 0, w: 0}
   deltaScale: 1.5
   deltaRotate: .5
-  camera: {fileID: 0}
+  mapNavigationButtonsPanel: {fileID: 0}
+  rotationButtonsPanel: {fileID: 0}
 --- !u!114 &11438658
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,7 +509,8 @@ MonoBehaviour:
   cachedRotation: {x: 0, y: 0, z: 0, w: 0}
   deltaScale: 1.5
   deltaRotate: 1.5
-  camera: {fileID: 0}
+  mapNavigationButtonsPanel: {fileID: 0}
+  rotationButtonsPanel: {fileID: 0}
 --- !u!114 &11487392
 MonoBehaviour:
   m_ObjectHideFlags: 1

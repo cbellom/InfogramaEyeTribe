@@ -28,6 +28,8 @@ public class ResizeBoxColliderNavigationButtons : MonoBehaviour {
 				return 20;
 			case "Rigth":
 				return -20;
+			case "ExitButton":
+				return 20;
 			default:
 				return 0;
 		}
