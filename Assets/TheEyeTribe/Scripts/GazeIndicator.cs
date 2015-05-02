@@ -74,7 +74,7 @@ namespace CompleteProject
 					// Map gaze indicator
 					Point2D gp = UnityGazeUtils.getGazeCoordsToUnityWindowCoords(gazeCoords);
 					
-					Vector3 screenPoint = new Vector3((float)gp.X, (float)gp.Y, _Camera.nearClipPlane + 4.0f);
+					Vector3 screenPoint = new Vector3((float)gp.X, (float)gp.Y, _Camera.nearClipPlane + 20.0f);
 					
 					Vector3 planeCoord = _Camera.ScreenToWorldPoint(screenPoint);
 					_GazeIndicator.transform.position = planeCoord;
