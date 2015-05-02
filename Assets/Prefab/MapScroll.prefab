@@ -50,6 +50,7 @@ GameObject:
   - 65: {fileID: 6587396}
   - 23: {fileID: 2387396}
   - 222: {fileID: 22287396}
+  - 114: {fileID: 11410170}
   m_Layer: 5
   m_Name: Edificio1
   m_TagString: ObjectInteractable
@@ -248,6 +249,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11410170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce2022751d46e7146a5d14163381563d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToTriggerAction: 3
 --- !u!114 &11487392
 MonoBehaviour:
   m_ObjectHideFlags: 1
