@@ -4,10 +4,10 @@ using System.Collections;
 
 public class ObjectInteractable : MonoBehaviour {
 	[SerializeField]
-	private float timeToTriggerAction;
-	private float elapsedTime;
-	private bool isTriggerActivate;
-	private GameObject worldCollider;
+	protected float timeToTriggerAction;
+	protected float elapsedTime;
+	protected bool isTriggerActivate;
+	protected GameObject worldCollider;
 
 	protected Action ObjectSelected;
 
