@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ResizeBoxCollider : MonoBehaviour {
+public class ResizeBoxColliderNavigationButtons : MonoBehaviour {
 
 	void Update(){
 		if (this.GetComponent<BoxCollider> ().size.x <= 1) {

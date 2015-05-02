@@ -223,7 +223,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 169790}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50a10a0b6d2a0149af5868aeabb84a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da9b780af25f8a47a86cb716bd28bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11427556
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 169786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50a10a0b6d2a0149af5868aeabb84a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da9b780af25f8a47a86cb716bd28bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11427558
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 169782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50a10a0b6d2a0149af5868aeabb84a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da9b780af25f8a47a86cb716bd28bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11427560
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 169778}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50a10a0b6d2a0149af5868aeabb84a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2da9b780af25f8a47a86cb716bd28bb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11469772
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
+  worldCollider: {fileID: 0}
   navigationState: 2
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -638,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
+  worldCollider: {fileID: 0}
   navigationState: 3
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -653,6 +655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
+  worldCollider: {fileID: 0}
   navigationState: 1
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
@@ -668,6 +671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
+  worldCollider: {fileID: 0}
   navigationState: 0
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
