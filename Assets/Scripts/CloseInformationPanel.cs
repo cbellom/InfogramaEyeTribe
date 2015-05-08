@@ -11,9 +11,14 @@ public class CloseInformationPanel : ObjectInteractable {
 
 	private void HanldeObjectSelected(){
 		Debug.Log("Closing Parent");
+		
+		elapsedTime = 0;
+		isTriggerActivate = false;
+		UpdateValueColorGazeIndicator ();
 
 		if (worldColliderReference != null) 
 			worldColliderReference.SetActive (true);
+
 
 		this.gameObject.transform.parent.gameObject.SetActive (false);
 	}

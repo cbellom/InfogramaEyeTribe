@@ -623,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  directionState: 0
+  directionState: 2
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
 --- !u!114 &11497448
@@ -638,7 +638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  directionState: 0
+  directionState: 3
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
 --- !u!114 &11497450
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTriggerAction: 2
-  directionState: 0
+  directionState: 1
   deltaMovementScroll: 5
   mScrollRect: {fileID: 0}
 --- !u!114 &11497452

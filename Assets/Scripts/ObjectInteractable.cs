@@ -61,7 +61,7 @@ public class ObjectInteractable : MonoBehaviour {
 		ObjectSelected = HandleAction;
 	}
 
-	private void UpdateValueColorGazeIndicator(){
+	protected void UpdateValueColorGazeIndicator(){
 		BindCircleForShader bindCircle = gazeIndicator.GetComponent<BindCircleForShader>() as BindCircleForShader;
 		bindCircle.SetValue (elapsedTime/timeToTriggerAction);
 	}
