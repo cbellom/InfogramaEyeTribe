@@ -9,6 +9,7 @@ public class ObjectInteractable : MonoBehaviour {
 	protected bool isTriggerActivate;
 	protected bool canTriggerExit;
 	protected GameObject worldCollider;
+	protected StateManager stateManager;
 	private GameObject gazeIndicator;
 
 	protected Action ObjectSelected;
@@ -17,6 +18,7 @@ public class ObjectInteractable : MonoBehaviour {
 	void Start(){
 		worldCollider = GameObject.Find("WorldCollider");
 		gazeIndicator = GameObject.FindWithTag("gazeIndicator");
+		stateManager = GameObject.Find("StateManager").GetComponent<StateManager>();
 		canTriggerExit = true;
 	}
 

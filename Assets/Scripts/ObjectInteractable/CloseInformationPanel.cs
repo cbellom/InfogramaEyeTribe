@@ -4,6 +4,8 @@ using System.Collections;
 public class CloseInformationPanel : ObjectInteractable {	
 	[SerializeField]
 	private GameObject worldColliderReference;
+	[SerializeField]
+	private GameObject informationView;
 
 	void Awake(){
 		ObjectSelected = HanldeObjectSelected;
@@ -16,10 +18,15 @@ public class CloseInformationPanel : ObjectInteractable {
 		isTriggerActivate = false;
 		UpdateValueColorGazeIndicator ();
 
-		if (worldColliderReference != null) 
-			worldColliderReference.SetActive (true);
+		ActiveAnimationExitInformtionView ();
 
+		stateManager.state = State.FreeFocus;
+		
+	}
 
-		this.gameObject.transform.parent.gameObject.SetActive (false);
+	private void ActiveAnimationExitInformtionView(){
+		PopUpActivator popUpActivator = informationView.GetComponent<PopUpActivator> ();
+		if (popUpActivator != null)
+			popUpActivator.PopUpExit ();
 	}
 }
